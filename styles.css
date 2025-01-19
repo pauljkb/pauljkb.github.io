@@ -36,7 +36,8 @@ html, body {
 body {
     font-family: 'Bemio';
     color: white;
-    background: url('media/house.jpg') center/cover no-repeat; /* Replace with your image */
+    background: url('media/house.jpg');
+    background-repeat: repeat;
     flex: 1; /* Makes the body take up the remaining space */
 }
 
@@ -71,7 +72,7 @@ nav {
     justify-content: center;
     gap: 30px;
     padding: 15px;
-    padding-top: 150px;
+    padding-top: 20vh;
 }
 
 nav a {

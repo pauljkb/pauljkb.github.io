@@ -12,6 +12,12 @@ body {
     color: white;
 }
 
+.dynamic-text {
+    font-size: 32px;
+    font-weight: bold;
+    transition: font-family 0.1s ease-in-out;
+}
+
 div.title_container {
     height: 50%;
     width: 100%;
@@ -22,26 +28,14 @@ div.title_container {
     font-size: 5vw;
 }
 
-h1 {
-    text-align: center;
+div.title_container div a {
     transition: all 0.2s ease;
 }
-
-a {
-    color: white;
-}
-
-
-li {
-    list-style-type: none;
-    display: table-cell;
-}
-
 
 .menu_list {
     position: fixed;
     left: 50%;
-    bottom: 100px;
+    bottom: 300px;
     transform: translate(-50%, -50%);
     margin: 0 auto;
     display: flex; /* Enables flexbox layout */
@@ -55,7 +49,16 @@ li {
 .menu_list div {
     text-align: center;
 }
+
+.menu_list div a {
+    transition: all 0.2s ease;
+}
+
 .menu_list div a:hover {
+    color: red;
+}
+
+.title-text a:hover {
     color: red;
 }
 
@@ -69,6 +72,7 @@ li {
     justify-content: space-evenly; /* Equal spacing between items */
     align-items: center; /* Align items vertically (if needed) */
     flex-wrap: wrap; /* Allows items to wrap to the next line */
+    gap: 2em; /* Optional: Adds space between items */
 }
 
 
@@ -95,6 +99,10 @@ svg:hover {
         flex-direction: column; /* Stack items vertically */
         gap: 10px; /* Adjust spacing for smaller screens */
     }
+}
+
+a {
+    color: white;
 }
 
 a:link {

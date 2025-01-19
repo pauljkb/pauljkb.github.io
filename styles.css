@@ -1,12 +1,29 @@
+@font-face {
+    font-family: 'Bemio';
+    src: url('fonts/Bemio.otf');
+}
+
 body {
-    background-color: black;
-    font: 1.2rem "Fira Sans", sans-serif;
-    color: white;
+    font-family: 'Bemio';
+    background-image: url('media/house.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+div.title_container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    position: fixed;
+    align-items: center;
+    justify-content: center;
+    font-size: 9vw;
 }
 
 h1 {
     text-align: center;
-    transition: all 0.5s ease;
+    transition: all 0.2s ease;
 }
 
 a {
@@ -20,12 +37,71 @@ li {
     display: table-cell;
 }
 
-div.menu_list {
+
+.menu_list {
+    position: fixed;
+    left: 50%;
+    bottom: 100px;
+    transform: translate(-50%, -50%);
+    margin: 0 auto;
+    display: flex; /* Enables flexbox layout */
+    justify-content: space-evenly; /* Equal spacing between items */
+    align-items: center; /* Align items vertically (if needed) */
+    flex-wrap: wrap; /* Allows items to wrap to the next line */
+    gap: 4em; /* Optional: Adds space between items */
+}
+
+.menu_list div {
+    text-align: center;
+}
+
+.menu_list h1 {
+    margin: 0; /* Remove default margins for h1 */
+}
+
+
+.socials_list {
     position: fixed;
     left: 50%;
     bottom: 20px;
     transform: translate(-50%, -50%);
     margin: 0 auto;
+    display: flex; /* Enables flexbox layout */
+    justify-content: space-evenly; /* Equal spacing between items */
+    align-items: center; /* Align items vertically (if needed) */
+    flex-wrap: wrap; /* Allows items to wrap to the next line */
+    gap: 1em; /* Optional: Adds space between items */
+}
+
+h1:hover {
+    color: red;
+}
+.custom-icon {
+    fill: #3498db; /* Set the desired color (e.g., blue) */
+}
+svg:hover {
+    color: red;
+    fill: red;
+}
+
+.socials_list div {
+    text-align: center;
+}
+
+
+.socials_list h1 {
+    margin: 0; /* Remove default margins for h1 */
+}
+
+@media (max-width: 768px) {
+    .menu_list {
+        flex-direction: column; /* Stack items vertically */
+        gap: 10px; /* Adjust spacing for smaller screens */
+    }
+    .socials_list {
+        flex-direction: column; /* Stack items vertically */
+        gap: 10px; /* Adjust spacing for smaller screens */
+    }
 }
 
 a:link {
@@ -41,7 +117,4 @@ a:active {
     text-decoration: none;
 }
 
-h1:hover {
-    color: red;
-}
 

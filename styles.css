@@ -9,6 +9,8 @@ a {
     color: white;
 }
 
+html, body {margin: 0; height: 100%; overflow: hidden}
+
 a:link {
     text-decoration: none;
 }
@@ -71,8 +73,7 @@ nav {
     display: flex;
     justify-content: center;
     gap: 30px;
-    padding: 15px;
-    padding-top: 20vh;
+    padding-top: 10vh;
 }
 
 nav a {

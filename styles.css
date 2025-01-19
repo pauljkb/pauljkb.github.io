@@ -9,16 +9,17 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
+    color: white;
 }
 
 div.title_container {
-    height: 100%;
+    height: 50%;
     width: 100%;
     display: flex;
     position: fixed;
     align-items: center;
     justify-content: center;
-    font-size: 9vw;
+    font-size: 5vw;
 }
 
 h1 {
@@ -29,7 +30,6 @@ h1 {
 a {
     color: white;
 }
-
 
 
 li {
@@ -48,17 +48,16 @@ li {
     justify-content: space-evenly; /* Equal spacing between items */
     align-items: center; /* Align items vertically (if needed) */
     flex-wrap: wrap; /* Allows items to wrap to the next line */
-    gap: 4em; /* Optional: Adds space between items */
+    gap: 2em; /* Optional: Adds space between items */
+    font-size: 2em;
 }
 
 .menu_list div {
     text-align: center;
 }
-
-.menu_list h1 {
-    margin: 0; /* Remove default margins for h1 */
+.menu_list div a:hover {
+    color: red;
 }
-
 
 .socials_list {
     position: fixed;
@@ -70,14 +69,12 @@ li {
     justify-content: space-evenly; /* Equal spacing between items */
     align-items: center; /* Align items vertically (if needed) */
     flex-wrap: wrap; /* Allows items to wrap to the next line */
-    gap: 1em; /* Optional: Adds space between items */
 }
 
-h1:hover {
-    color: red;
-}
+
 .custom-icon {
-    fill: #3498db; /* Set the desired color (e.g., blue) */
+    fill: white; /* Set the desired color (e.g., blue) */
+    transition: all 0.2s ease;
 }
 svg:hover {
     color: red;
@@ -88,10 +85,6 @@ svg:hover {
     text-align: center;
 }
 
-
-.socials_list h1 {
-    margin: 0; /* Remove default margins for h1 */
-}
 
 @media (max-width: 768px) {
     .menu_list {

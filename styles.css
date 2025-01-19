@@ -1,0 +1,47 @@
+body {
+    background-color: black;
+    font: 1.2rem "Fira Sans", sans-serif;
+    color: white;
+}
+
+h1 {
+    text-align: center;
+    transition: all 0.5s ease;
+}
+
+a {
+    color: white;
+}
+
+
+
+li {
+    list-style-type: none;
+    display: table-cell;
+}
+
+div.menu_list {
+    position: fixed;
+    left: 50%;
+    bottom: 20px;
+    transform: translate(-50%, -50%);
+    margin: 0 auto;
+}
+
+a:link {
+    text-decoration: none;
+}
+a:visited {
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: none;
+}
+a:active {
+    text-decoration: none;
+}
+
+h1:hover {
+    color: red;
+}
+

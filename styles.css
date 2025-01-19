@@ -1,104 +1,8 @@
-@font-face {
-    font-family: 'Bemio';
-    src: url('fonts/Bemio.otf');
-}
-
-body {
-    font-family: 'Bemio';
-    background-image: url('media/house.jpg');
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    color: white;
-}
-
-.dynamic-text {
-    font-size: 32px;
-    font-weight: bold;
-    transition: font-family 0.1s ease-in-out;
-}
-
-div.title_container {
-    height: 50%;
-    width: 100%;
-    display: flex;
-    position: fixed;
-    align-items: center;
-    justify-content: center;
-    font-size: 5vw;
-}
-
-div.title_container div a {
-    transition: all 0.2s ease;
-}
-
-.menu_list {
-    position: fixed;
-    left: 50%;
-    bottom: 300px;
-    transform: translate(-50%, -50%);
-    margin: 0 auto;
-    display: flex; /* Enables flexbox layout */
-    justify-content: space-evenly; /* Equal spacing between items */
-    align-items: center; /* Align items vertically (if needed) */
-    flex-wrap: wrap; /* Allows items to wrap to the next line */
-    gap: 2em; /* Optional: Adds space between items */
-    font-size: 2em;
-}
-
-.menu_list div {
-    text-align: center;
-}
-
-.menu_list div a {
-    transition: all 0.2s ease;
-}
-
-.menu_list div a:hover {
-    color: red;
-}
-
-.title-text a:hover {
-    color: red;
-}
-
-.socials_list {
-    position: fixed;
-    left: 50%;
-    bottom: 20px;
-    transform: translate(-50%, -50%);
-    margin: 0 auto;
-    display: flex; /* Enables flexbox layout */
-    justify-content: space-evenly; /* Equal spacing between items */
-    align-items: center; /* Align items vertically (if needed) */
-    flex-wrap: wrap; /* Allows items to wrap to the next line */
-    gap: 2em; /* Optional: Adds space between items */
-}
-
-
-.custom-icon {
-    fill: white; /* Set the desired color (e.g., blue) */
-    transition: all 0.2s ease;
-}
-svg:hover {
-    color: red;
-    fill: red;
-}
-
-.socials_list div {
-    text-align: center;
-}
-
-
-@media (max-width: 768px) {
-    .menu_list {
-        flex-direction: column; /* Stack items vertically */
-        gap: 10px; /* Adjust spacing for smaller screens */
-    }
-    .socials_list {
-        flex-direction: column; /* Stack items vertically */
-        gap: 10px; /* Adjust spacing for smaller screens */
-    }
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 a {
@@ -118,4 +22,113 @@ a:active {
     text-decoration: none;
 }
 
+@font-face {
+    font-family: 'Bemio';
+    src: url('fonts/Bemio.otf');
+}
 
+html, body {
+    height: 100%; /* Ensures full page height */
+    display: flex;
+    flex-direction: column;
+}
+
+body {
+    font-family: 'Bemio';
+    color: white;
+    background: url('media/house.jpg') center/cover no-repeat; /* Replace with your image */
+    flex: 1; /* Makes the body take up the remaining space */
+}
+
+header {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+header h1 {
+    text-transform: uppercase;
+    padding-top: 100px;
+    letter-spacing: 3px;
+    font-size: 5rem;
+}
+
+@media (max-width: 750px) {
+    header h1 {
+        font-size: 2rem; /* Further reduce font size on very small screens */
+    }
+}
+
+header h1 a {
+    transition: all 0.2s ease;
+}
+
+header h1 a:hover {
+    color: red;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 15px;
+    padding-top: 150px;
+}
+
+nav a {
+    text-decoration: none;
+    font-size: 2em;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: all 0.2s ease;
+}
+
+nav a:hover {
+    color: red;
+}
+
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.custom-icon {
+    fill: white; /* Set the desired color (e.g., blue) */
+    transition: all 0.2s ease;
+}
+footer {
+    margin-top: auto; /* Pushes the footer to the bottom */
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+}
+
+footer p {
+    margin-bottom: 10px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-icons a {
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: white;
+    transition: all 0.2s ease;
+}
+
+.custom-icon:hover {
+    color: red;
+    fill: red;
+}
+
+.social-icons a:hover {
+    color: red;
+    fill: red;
+    transform: scale(1.2);
+}

@@ -102,6 +102,13 @@ header div a {
     padding-top: 10vh;
 }
 
+.content_container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding-top: 10vh;
+}
+
 a:hover {
     color: red;
 }

@@ -46,6 +46,11 @@ body {
     color: white;
     flex: 1; /* Makes the body take up the remaining space */
     background-color: black;
+    background-image: url('media/background.gif');
+    background-size: cover; /* Ensures the GIF covers the entire screen */
+    background-position: center; /* Centers the GIF */
+    background-repeat: no-repeat; /* Prevents the GIF from repeating */
+    background-attachment: fixed; /* Keeps the background fixed during scrolling */
 }
 
 video {

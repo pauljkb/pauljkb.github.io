@@ -7,6 +7,10 @@
 
 a {
     color: white;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select :none;
+    user-select: none;
 }
 
 
@@ -80,10 +84,6 @@ header {
 header div a {
     display: inline-block;
     cursor: pointer;
-    -moz-user-select: none;
-    -webkit-user-select: none;
-    -ms-user-select :none;
-    user-select: none;
 }
 
 

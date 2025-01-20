@@ -25,11 +25,6 @@ a:active {
 }
 
 @font-face {
-    font-family: 'Bemio';
-    src: url('fonts/Bemio.otf');
-}
-
-@font-face {
     font-family: 'Technology';
     src: url('fonts/Technology.ttf');
 }
@@ -46,7 +41,7 @@ html, body {
 }
 
 body {
-    font-family: 'Technology';
+    font-family: 'Technology', serif;
     text-transform: uppercase;
     color: white;
     flex: 1; /* Makes the body take up the remaining space */

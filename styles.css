@@ -38,11 +38,6 @@ a:active {
     font-feature-settings: "liga" 0;
 }
 
-html, body {
-    height: 100%; /* Ensures full page height */
-    display: flex;
-    flex-direction: column;
-}
 
 body {
     font-family: 'Technology', serif;
@@ -50,7 +45,7 @@ body {
     color: white;
     flex: 1; /* Makes the body take up the remaining space */
     background-color: black;
-
+    position: relative;
     background-size: cover; /* Ensures the GIF covers the entire screen */
     background-position: center; /* Centers the GIF */
     background-repeat: repeat; /* Prevents the GIF from repeating */
@@ -137,10 +132,11 @@ a:hover {
     transition: all 0.2s ease;
 }
 footer {
-    margin-top: auto; /* Pushes the footer to the bottom */
-    text-align: center;
     background-color: rgba(0, 0, 0, 0.7);
     padding: 20px;
+    bottom: 0;
+    position: fixed;
+    width: 100%;
 }
 
 footer p {

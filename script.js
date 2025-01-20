@@ -1,37 +1,47 @@
 let shuffledEls = document.querySelectorAll(".shuffle");
 let duration = 50;
-let framesMax = 7
+let framesMax = 7;
 
 shuffledEls.forEach((shuffledEl) => {
     let textOrig = shuffledEl.textContent;
     let inter;
 
-    shuffledEl.addEventListener("mouseover", (e) => {
-        let text = e.currentTarget.textContent;
+    // Function to perform the shuffle animation
+    function shuffleText(element) {
+        let text = element.textContent;
         let charArr = text.split("");
         let frame = 0;
 
-        // shuffle at given speed
         inter = setInterval(() => {
-            if(frame<framesMax){
+            if (frame < framesMax) {
                 let charArrShuff = shuffleArr(charArr);
-                shuffledEl.textContent = charArrShuff.join("");
-                frame++
-            }else{
+                element.textContent = charArrShuff.join("");
+                frame++;
+            } else {
                 clearInterval(inter);
-                shuffledEl.textContent = textOrig;
+                element.textContent = textOrig;
             }
         }, duration);
+    }
 
+    // Apply shuffle on hover
+    shuffledEl.addEventListener("mouseover", (e) => {
+        shuffleText(e.currentTarget);
     });
 
-    // stop
+    // Reset text on mouse leave
     shuffledEl.addEventListener("mouseleave", (e) => {
         e.currentTarget.textContent = textOrig;
         clearInterval(inter);
     });
+
+    // Trigger shuffle on page load
+    document.addEventListener("DOMContentLoaded", () => {
+        shuffleText(shuffledEl);
+    });
 });
 
+// Shuffle array utility function
 function shuffleArr(arr) {
     return arr.reduce(
         ([a, b]) => (

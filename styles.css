@@ -29,6 +29,16 @@ a:active {
     src: url('fonts/Bemio.otf');
 }
 
+@font-face {
+    font-family: 'Technology';
+    src: url('fonts/Technology.ttf');
+}
+
+.shuffle{
+    font-kerning: none;
+    font-feature-settings: "liga" 0;
+}
+
 html, body {
     height: 100%; /* Ensures full page height */
     display: flex;
@@ -36,61 +46,71 @@ html, body {
 }
 
 body {
-    font-family: 'Bemio';
+    font-family: 'Technology';
+    text-transform: uppercase;
     color: white;
-    background: url('media/house.jpg');
     background-repeat: repeat;
     flex: 1; /* Makes the body take up the remaining space */
+}
+
+video#bgVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    width: auto;
+    min-width: 100%;
+    height: auto;
+    min-height: 100%;
+    z-index: -100;
+    background-size: cover;
 }
 
 header {
     text-align: center;
     padding: 50px 20px;
-}
-
-header h1 {
-    text-transform: uppercase;
     padding-top: 100px;
     letter-spacing: 3px;
-    font-size: 5rem;
+    font-size: 7rem;
 }
 
-@media (max-width: 750px) {
-    header h1 {
-        font-size: 2rem; /* Further reduce font size on very small screens */
+
+@media (max-width: 768px) {
+    header {
+        font-size: 5rem; /* Further reduce font size on very small screens */
     }
 }
 
-header h1 a {
-    transition: all 0.2s ease;
+.header_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
-header h1 a:hover {
-    color: red;
+header div a {
+    display: inline-block;
+    cursor: pointer;
 }
 
-nav {
+
+.nav_container {
     display: flex;
     justify-content: center;
     gap: 30px;
     padding-top: 10vh;
 }
 
-nav a {
-    text-decoration: none;
-    font-size: 2em;
-    color: white;
-    font-weight: bold;
-    text-transform: uppercase;
-    transition: all 0.2s ease;
-}
-
-nav a:hover {
+a:hover {
     color: red;
 }
 
+.nav_container a {
+    font-size: 3em;
+}
+
+
 @media (max-width: 768px) {
-    nav {
+    .nav_container {
         flex-direction: column;
         align-items: center;
     }

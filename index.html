@@ -2,20 +2,91 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Two Minutes Late Drum and Bass Dio">
+    <meta name="author" content="Two Minutes Late - 2025">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
     <title>Two Minutes Late</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 <header>
-    <h1><a href="index.html">TWO MINUTES LATE</a></h1>
+
+        <div class="header_container">
+            <a href="index.html">
+                <div class="shuffle">TWO</div>
+            </a>
+            <a href="index.html">
+                <div class="shuffle">MINUTES</div>
+            </a>
+            <a href="index.html">
+                <div class="shuffle">LATE</div>
+            </a>
+        </div>
 </header>
 
-<nav>
-    <a href="mailto:booking@twominuteslate.com">Booking</a>
-    <a href="mailto:contact@twominuteslate.com">Contact</a>
-    <a href="about.html">About</a>
-</nav>
+
+
+<video id="bgVideo" controls preload="auto" autoplay loop muted>
+    <source src="media/twominutesurbanshootBW2.mp4" type="video/mp4" />
+
+</video>
+<div class="nav_container">
+    <a href="mailto:contact@twominuteslate.com">
+        <div class="shuffle">BOOKING</div>
+    </a>
+    <a href="mailto:booking@twominuteslate.com">
+        <div class="shuffle">CONTACT</div>
+    </a>
+    <a href="about">
+        <div class="shuffle">ABOUT</div>
+    </a>
+</div>
+<script>
+    let shuffledEls = document.querySelectorAll(".shuffle");
+    let duration = 50;
+    let framesMax = 7
+
+    shuffledEls.forEach((shuffledEl) => {
+        let textOrig = shuffledEl.textContent;
+        let inter;
+
+        shuffledEl.addEventListener("mouseover", (e) => {
+            let text = e.currentTarget.textContent;
+            let charArr = text.split("");
+            let frame = 0;
+
+            // shuffle at given speed
+            inter = setInterval(() => {
+                if(frame<framesMax){
+                    let charArrShuff = shuffleArr(charArr);
+                    shuffledEl.textContent = charArrShuff.join("");
+                    frame++
+                }else{
+                    clearInterval(inter);
+                    shuffledEl.textContent = textOrig;
+                }
+            }, duration);
+
+        });
+
+        // stop
+        shuffledEl.addEventListener("mouseleave", (e) => {
+            e.currentTarget.textContent = textOrig;
+            clearInterval(inter);
+        });
+    });
+
+    function shuffleArr(arr) {
+        return arr.reduce(
+            ([a, b]) => (
+                b.push(...a.splice((Math.random() * a.length) | 0, 1)), [a, b]
+            ),
+            [[...arr], []]
+        )[1];
+    }
+</script>
+
+
 
 <footer>
     <div class="social-icons">

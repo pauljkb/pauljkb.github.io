@@ -146,7 +146,7 @@ footer p {
 }
 
 .about {
-    background-image: url("media/about.jpg");
+    background-image: url("/media/about.jpg");
 }
 
 .social-icons a {

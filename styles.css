@@ -154,8 +154,13 @@ header div a {
     line-height: 1.5;
     font-size: 1.5rem;
     max-width: 550px;
-    word-break: keep-all;
     margin-bottom: 100px;
+}
+
+@media (max-width: 500px) {
+    .content_container p {
+        text-align: center;
+    }
 }
 
 .content_container img {

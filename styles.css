@@ -155,6 +155,7 @@ header div a {
     font-size: 1.5rem;
     max-width: 550px;
     word-break: keep-all;
+    margin-bottom: 100px;
 }
 
 .content_container img {

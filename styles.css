@@ -80,6 +80,7 @@ header .pre-header {
     justify-content: center;
 }
 
+
 header div a {
     display: inline-block;
     cursor: pointer;
@@ -90,9 +91,15 @@ header div a {
     display: flex;
     justify-content: center;
     gap: 10vw;
-    padding-top: 10vh;
+    padding-top: 20vh;
 }
 
+
+@media (max-height: 900px) {
+    .nav_container {
+        padding-top: 5vh;
+    }
+}
 
 @media (max-width: 768px) {
     header {
@@ -104,16 +111,68 @@ header div a {
         gap: 10px;
     }
 
+
+}
+
+@media (max-width: 1200px) {
     .about header {
-        font-size: 3rem; /* Further reduce font size on very small screens */
+        font-size: 2.5rem; /* Further reduce font size on very small screens */
+    }
+
+    .about header .header_container {
+        margin-top: 10px;
+        margin-bottom: 30px;
+    }
+
+    .about .line {
+        width: 20rem;
     }
 }
 
+.line {
+    width: 50rem;
+    height: 2px;
+    margin: auto;
+    border: 0;
+    background-color: white;
+}
+
 .content_container {
+    height: 100%;
+    padding: 50px;
+    margin: 0;
     display: flex;
+    align-items: center;
     justify-content: center;
-    gap: 30px;
-    padding-top: 10vh;
+}
+
+.content_container p {
+    font-family: monospace;
+    hyphens: auto;
+    text-transform: none;
+    text-align: justify;
+    line-height: 1.5;
+    font-size: 1.5rem;
+    max-width: 550px;
+    word-break: keep-all;
+}
+
+.content_container img {
+    display: block;
+    max-width: 30%;
+
+    padding: 10px;
+    border: 2px solid white;
+
+}
+
+.content_container img:hover {
+    display: block;
+    max-width: 30%;
+
+    padding: 10px;
+    border: 2px solid red;
+
 }
 
 a:hover {
@@ -124,7 +183,9 @@ a:hover {
     font-size: 3em;
 }
 
-
+a.link {
+    text-decoration: underline;
+}
 
 
 .custom-icon {
@@ -139,6 +200,11 @@ footer {
     width: 100%;
 }
 
+.vl {
+    border-left: 2px solid white;
+    height: 30px;
+}
+
 footer p {
     margin-bottom: 10px;
 }
@@ -146,11 +212,15 @@ footer p {
 .social-icons {
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: 20px;
 }
 
 .social-icons a {
     text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     font-size: 1.5rem;
     color: white;
     transition: all 0.2s ease;

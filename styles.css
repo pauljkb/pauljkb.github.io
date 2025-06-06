@@ -45,6 +45,7 @@ body {
     color: white;
     flex: 1; /* Makes the body take up the remaining space */
     background-color: black;
+    background-image: url("media/background.png");
     position: relative;
     background-size: cover; /* Ensures the GIF covers the entire screen */
     background-position: center; /* Centers the GIF */
@@ -101,6 +102,18 @@ header div a {
     }
 }
 
+.sc_container_desktop {
+    height: 100%;
+    margin: 50px 100px;
+    padding-bottom: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+
 @media (max-width: 768px) {
     header {
         font-size: 5rem; /* Further reduce font size on very small screens */
@@ -146,6 +159,13 @@ header div a {
     justify-content: center;
     flex-direction: column;
 }
+
+
+
+
+
+
+
 
 .content_container p {
     font-family: monospace;
